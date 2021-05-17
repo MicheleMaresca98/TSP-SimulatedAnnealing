@@ -1,0 +1,102 @@
+{
+  "Campania": {
+    "capoluogo": "Napoli",
+    "lat": "40.83956554",
+    "long": "14.25085002"
+  },
+  "Lombardia": {
+    "capoluogo": "Milano",
+    "lat": "45.46679408",
+    "long": "9.1903474"
+  },
+  "Lazio": {
+    "capoluogo": "Roma",
+    "lat": "41.89277044",
+    "long": "12.48366723"
+  },
+  "Puglia": {
+    "capoluogo": "Bari",
+    "lat": "41.12559562",
+    "long": "16.86737016"
+  },
+  "Basilicata": {
+    "capoluogo": "Potenza",
+    "lat": "40.63947047",
+    "long": "15.8051495"
+  },
+  "Calabria": {
+    "capoluogo": "Catanzaro",
+    "lat": "38.90597588",
+    "long": "16.59440429"
+  },
+  "Sicilia": {
+    "capoluogo": "Palermo",
+    "lat": "38.11569725",
+    "long": "13.36235675"
+  },
+  "Sardegna": {
+    "capoluogo": "Cagliari",
+    "lat": "39.21531191",
+    "long": "9.11061631"
+  },
+  "Umbria": {
+    "capoluogo": "Perugia",
+    "lat": "43.1067584",
+    "long": "12.38824699"
+  },
+  "Abruzzo": {
+    "capoluogo": "L'Aquila",
+    "lat": "42.35122195",
+    "long": "13.39843828"
+  },
+  "Molise": {
+    "capoluogo": "Campobasso",
+    "lat": "41.55774753",
+    "long": "14.65916084"
+  },
+  "Toscana": {
+    "capoluogo": "Firenze",
+    "lat": "43.76923077",
+    "long": "11.25588885"
+  },
+  "Marche": {
+    "capoluogo": "Ancona",
+    "lat": "43.61675973",
+    "long": "13.51887537"
+  },
+  "Emilia Romagna": {
+    "capoluogo": "Bologna",
+    "lat": "44.4943668",
+    "long": "11.3417208"
+  },
+  "Piemonte": {
+    "capoluogo": "Torino",
+    "lat": "45.0732745",
+    "long": "7.68068748"
+  },
+  "Liguria": {
+    "capoluogo": "Genova",
+    "lat": "44.41149314",
+    "long": "8.9326992"
+  },
+  "Veneto": {
+    "capoluogo": "Venezia",
+    "lat": "45.43490484",
+    "long": "12.33845214"
+  },
+  "Friuli Venezia Giulia": {
+    "capoluogo": "Trieste",
+    "lat": "45.6494354",
+    "long": "13.7681366"
+  },
+  "Valle D'Aosta": {
+    "capoluogo": "Aosta",
+    "lat": "45.73750285",
+    "long": "7.32014937"
+  },
+  "Trentino Alto Adige": {
+    "capoluogo": "Trento",
+    "lat": "46.06893511",
+    "long": "11.12123097"
+  }
+}
