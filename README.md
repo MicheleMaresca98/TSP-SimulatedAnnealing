@@ -9,5 +9,6 @@ approccio esatto.
 http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsplib.html
 
 ### TODO
-1. Risoluzione ottima del TSP per problemi di piccola dimensione con Gurobi con jupyter notebook
+1. Risoluzione ottima del TSP per problemi di piccola dimensione con Gurobi con jupyter notebook.
+   1. Fare lettura da file per prelevare le coordinate dei nodi.
 2. Rifare algoritmo SimulatedAnnealing 
