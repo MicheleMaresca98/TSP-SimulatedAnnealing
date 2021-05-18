@@ -24,4 +24,4 @@ PROPOSTE INIZIALI:
 	4.  Lk: Lk = L = costante = n (dove n è la dimensione dell'istanza del problema, cioè il numero di nodi del grafo)
 	5.  Quanto decrementare Tk, legge di decremento (successione Tk)
 
-2,3,4 sono proposte iniziali, poi in fase di cooling schedules bisogna provare a migliorarli facendo prove su istanze benchmark.
+2, 3, 4 sono proposte iniziali, poi in fase di cooling schedules bisogna provare a migliorarli facendo prove su istanze benchmark.
