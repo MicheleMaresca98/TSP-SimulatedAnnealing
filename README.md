@@ -16,11 +16,12 @@ http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsplib.html
 
 ### Cooling schedules
 PROPOSTE INIZIALI:
-	0) MOSSA: 2-opt.
-	1) Soluzione iniziale: random, oppure data in uscita da un algoritmo greedy.
-	2) T0: 10*|f0/2| (dove f0 è il valore della soluzione iniziale)
-	3) TF: 10^-4*|f0|
-	4) Lk: Lk = L = costante = n (dove n è la dimensione dell'istanza del problema, cioè il numero di nodi del grafo)
-	5) Quanto decrementare Tk, legge di decremento (successione Tk)
+
+	0.  MOSSA: 2-opt.
+	1.  Soluzione iniziale: random, oppure data in uscita da un algoritmo greedy.
+	2.  T0: 10*|f0/2| (dove f0 è il valore della soluzione iniziale)
+	3.  TF: 10^-4*|f0|
+	4.  Lk: Lk = L = costante = n (dove n è la dimensione dell'istanza del problema, cioè il numero di nodi del grafo)
+	5.  Quanto decrementare Tk, legge di decremento (successione Tk)
 
 2,3,4 sono proposte iniziali, poi in fase di cooling schedules bisogna provare a migliorarli facendo prove su istanze benchmark.
