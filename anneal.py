@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 
 class SimAnneal(object):
     def __init__(self, coords, T=-1, alpha=-1, stopping_T=-1, stopping_iter=-1):
-        self.coords = coords
-        self.N = len(coords)
+        self.coords = coords    #insieme delle coordinate di ciascun nodo del problema
+        self.N = len(coords)    #dimensione problema (numero nodi)
         self.T = math.sqrt(self.N) if T == -1 else T
         self.T_save = self.T  # save inital T to reset if batch annealing is used
         self.alpha = 0.995 if alpha == -1 else alpha
@@ -15,28 +15,43 @@ class SimAnneal(object):
         self.stopping_iter = 100000 if stopping_iter == -1 else stopping_iter
         self.iteration = 1
 
-        self.nodes = [i for i in range(self.N)]
+        self.nodes = [i for i in range(self.N)] #insieme dei nodi del problema
 
         self.best_solution = None
         self.best_fitness = float("Inf")
         self.fitness_list = []
 
+# Algoritmo Greedy per cercare una soluzione iniziale
     def initial_solution(self):
         """
         Greedy algorithm to get an initial solution (closest-neighbour).
         """
         cur_node = random.choice(self.nodes)  # start from a random node
-        solution = [cur_node]
+                                            # sceglie un nodo random dalla lista di nodi
+        solution = [cur_node]               # lo pone nella soluzione corrente
 
-        free_nodes = set(self.nodes)
-        free_nodes.remove(cur_node)
-        while free_nodes:
+        free_nodes = set(self.nodes)        # converte lista in set
+        free_nodes.remove(cur_node)         # rimuovo il nodo corrente (appena posto in soluzione)
+                                            # dal set dei nodi liberi (non ancora visitati)
+
+                                            # Perchè converte in set la lista? non si può fare anche con lista=
+
+        while free_nodes:                   # ciclo fino a quando ci sono elementi nel set dei nodi liberi
             next_node = min(free_nodes, key=lambda x: self.dist(cur_node, x))  # nearest neighbour
-            free_nodes.remove(next_node)
-            solution.append(next_node)
-            cur_node = next_node
+                                            # calcola l'indice del prossimo nodo da aggiungere alla soluzione.
+                                            # lo fa prendendo il nodo che presenta la distanza minima dal nodo corrente
+                                            # attraverso una lambda function
+                                            # dopo "lambda" c'è il parametro di input (x) e dopo i ":" c'è la funzione,
+                                            # in questo caso c'è il calcolo della distanza.
+                                            # Quindi viene calcolato l'indice del nodo tra i nodi liberi, che presenta
+                                            # la minima distanza dal nodo corrente.
+            free_nodes.remove(next_node)    # rimuove il nodo appena ottenuto dai nodi liberi (non utilizzati)
+            solution.append(next_node)      # aggiunge il nodo appena ottenuto alla soluzione
+            cur_node = next_node            # aggiorna il nodo corrente con il nodo appena ottenuto.
 
-        cur_fit = self.fitness(solution)
+            # La funzione di ricerca Greedy è diversa da quella vista al corso, si può modificare.
+
+        cur_fit = self.fitness(solution)    # calcola il valroe della funzione obiettivo e lo pone in cur_fit
         if cur_fit < self.best_fitness:  # If best found so far, update best fitness
             self.best_fitness = cur_fit
             self.best_solution = solution

@@ -11,8 +11,9 @@ http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsplib.html
 ### TODO
 1. Risoluzione ottima del TSP per problemi di piccola dimensione con Gurobi con jupyter notebook. (FATTO)
    1. Fare lettura da file per prelevare le coordinate dei nodi. (FATTO)
-2. Rifare algoritmo SimulatedAnnealing 
-3. Cooling schedules
+2. Rifare algoritmo Greedy per trovare soluzione iniziale (vedere slide corso)
+3. Rifare algoritmo SimulatedAnnealing 
+4. Cooling schedules
 
 ### Cooling schedules
 PROPOSTE INIZIALI:
