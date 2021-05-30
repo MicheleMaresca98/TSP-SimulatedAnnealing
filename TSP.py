@@ -70,12 +70,26 @@ class TSP(object):
         else:
             self.iterazione += self.iterazione
 
+    def mossa2_opt(self, candidate):
+        i = random.randint(0, self.N - 1)
+        free_nodes = list(self.nodi)
+        free_nodes.remove(i)
+        free_nodes.remove(i - 1)
+        free_nodes.remove(i + 1)
+        j = random.choice(free_nodes)
+        if i < j:
+            candidate[i:j] = reversed(candidate[i:j])
+        else:
+            candidate[j:i] = reversed(candidate[j:i])
+
+
     def simulatedannealing(self):
         self.calcolo_soluzione_iniziale()
         while self.T >= self.temperatura_finale:  # si potrebbe aggiungere anche un contatore assoluto di iterazioni
             # per non farne troppe
             candidate = list(self.current_solution)
             # mossa 2-opt
+            self.mossa2_opt(candidate)
             self.calcolo_probabilita_accettazione(candidate)
         print("Miglior risultato ottenuto: ", self.best_objective)
         return self.best_objective
