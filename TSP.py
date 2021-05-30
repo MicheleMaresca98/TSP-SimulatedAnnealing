@@ -62,7 +62,7 @@ class TSP(object):
         else:
             if random.random() < math.exp(-(candidate_objective - self.current_objective) / self.T):
                 self.current_solution, self.current_objective = candidate, candidate_objective
-            self.avanza_T()
+
 
     def avanza_T(self):
         if self.iterazione == self.L:
@@ -92,6 +92,7 @@ class TSP(object):
             # mossa 2-opt
             self.mossa2_opt(candidate)
             self.calcolo_probabilita_accettazione(candidate)
+            self.avanza_T()
         print("Miglior risultato ottenuto: ", self.best_objective)
         return self.best_objective
 
