@@ -73,10 +73,10 @@ class TSP(object):
 
     def mossa2_opt(self, candidate):
         i = random.randint(0, self.N - 1)
-        free_nodes = list(self.nodi)
-        free_nodes.remove(i)
-        free_nodes.remove(i - 1)
-        free_nodes.remove(i + 1)
+        free_nodes = list(candidate)
+        free_nodes.remove(candidate[i])
+        free_nodes.remove(candidate[i - 1] if i > 0 else candidate[self.N - 1])
+        free_nodes.remove(candidate[i + 1] if i < (self.N - 1) else candidate[0])
         j = random.choice(free_nodes)
         if i < j:
             candidate[i:j] = reversed(candidate[i:j])
