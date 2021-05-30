@@ -4,7 +4,7 @@ import visualize_tsp
 
 
 class TSP(object):
-    def __init__(self, coordinate, temperatura_iniziale=-1, temperatura_finale=-1, alpha=-1, stopping_iter = -1):
+    def __init__(self, coordinate, temperatura_iniziale=-1, temperatura_finale=-1, alpha=-1):
         self.coordinate = coordinate
         self.N = len(coordinate)
         self.L = self.N
@@ -19,8 +19,6 @@ class TSP(object):
         self.current_solution = None
         self.current_objective = float("Inf")
         self.iterazione = 1  # iterazione con valore di temperatura fisso
-        self.stopping_iter = (100*self.N) if stopping_iter == -1 else stopping_iter
-        self.iterazione_assoluta = 1
 
         # Per ora lascio Greedy trovata
     def calcolo_soluzione_iniziale(self):
@@ -72,7 +70,6 @@ class TSP(object):
             self.T *= self.alpha
         else:
             self.iterazione += 1
-        self.iterazione_assoluta += 1
 
     def mossa2_opt(self, candidate):
         i = random.randint(0, self.N - 1)
@@ -89,7 +86,7 @@ class TSP(object):
 
     def simulatedannealing(self):
         self.calcolo_soluzione_iniziale()
-        while self.T >= self.temperatura_finale and self.iterazione_assoluta < self.stopping_iter:  # si potrebbe
+        while self.T >= self.temperatura_finale: # si potrebbe
             # aggiungere anche un contatore assoluto di iterazioni
             # per non farne troppe
             candidate = list(self.current_solution)
