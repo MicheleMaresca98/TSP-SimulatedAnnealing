@@ -4,7 +4,7 @@ import visualize_tsp
 
 
 class TSP(object):
-    def __init__(self, coordinate, temperatura_iniziale=-1, temperatura_finale=-1, alpha=-1):
+    def __init__(self, coordinate, temperatura_iniziale=-1, temperatura_finale=-1, alpha=-1, stopping_iter = -1):
         self.coordinate = coordinate
         self.N = len(coordinate)
         self.L = self.N
@@ -13,14 +13,16 @@ class TSP(object):
         self.T = self.temperatura_iniziale
         self.alpha = ((0.99 if self.L < 1000 else 0.8) if alpha == -1 else alpha)
         self.nodi = [i for i in range(self.N)]
-        # self.distanze = {(n1, n2): self.calcolo_distanza(n1, n2) for n1 in self.nodi for n2 in self.nodi if n1 != n2}
+        self.distanze = {(n1, n2): self.calcolo_distanza(n1, n2) for n1 in self.nodi for n2 in self.nodi if n1 != n2}
         self.best_solution = None
         self.best_objective = float("Inf")
         self.current_solution = None
         self.current_objective = float("Inf")
         self.iterazione = 1  # iterazione con valore di temperatura fisso
+        self.stopping_iter = (100*self.N) if stopping_iter == -1 else stopping_iter
+        self.iterazione_assoluta = 1
 
-    # Per ora lascio Greedy trovata
+        # Per ora lascio Greedy trovata
     def calcolo_soluzione_iniziale(self):
         current_node = random.choice(self.nodi)
         solution = [current_node]
@@ -69,7 +71,8 @@ class TSP(object):
             self.iterazione = 1
             self.T *= self.alpha
         else:
-            self.iterazione += self.iterazione
+            self.iterazione += 1
+        self.iterazione_assoluta += 1
 
     def mossa2_opt(self, candidate):
         i = random.randint(0, self.N - 1)
@@ -86,7 +89,8 @@ class TSP(object):
 
     def simulatedannealing(self):
         self.calcolo_soluzione_iniziale()
-        while self.T >= self.temperatura_finale:  # si potrebbe aggiungere anche un contatore assoluto di iterazioni
+        while self.T >= self.temperatura_finale and self.iterazione_assoluta < self.stopping_iter:  # si potrebbe
+            # aggiungere anche un contatore assoluto di iterazioni
             # per non farne troppe
             candidate = list(self.current_solution)
             # mossa 2-opt
@@ -94,6 +98,8 @@ class TSP(object):
             self.calcolo_probabilita_accettazione(candidate)
             self.avanza_T()
         print("Miglior risultato ottenuto: ", self.best_objective)
+        print("Tour: ", self.best_solution)
+        print(self.distanze)
         return self.best_objective
 
     def visualizza_tour(self):

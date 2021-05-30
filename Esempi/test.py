@@ -10,7 +10,7 @@ def read_coords(path):
         line = line.strip('\n')
         data = line.split(':')
         dimension = int(data[1])
-        for i in range(0, 2):
+        for i in range(0, 4):
             line = f.readline()
         for i in range(0, dimension):
             line = f.readline()
@@ -21,7 +21,7 @@ def read_coords(path):
 
 
 if __name__ == "__main__":
-    coords, dimension = read_coords("a280.txt")
+    coords, dimension = read_coords("burma14.txt")
     #print(coords)
     sa = SimAnneal(coords, stopping_iter=5000)
     sa.anneal()

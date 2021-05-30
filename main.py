@@ -23,4 +23,4 @@ if __name__ == "__main__":
     tsp = TSP(coordinate)
     eur = tsp.simulatedannealing()
     gap = (abs(b - eur) / abs(b)) * 100.0
-    tsp.visualizza_tour()
+    #tsp.visualizza_tour()
