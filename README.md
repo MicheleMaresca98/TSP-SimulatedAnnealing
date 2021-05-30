@@ -9,10 +9,9 @@ approccio esatto.
 http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsplib.html
 
 ### TODO
-1. Risoluzione ottima del TSP per problemi di piccola dimensione con Gurobi con jupyter notebook. (FATTO)
-   1. Fare lettura da file per prelevare le coordinate dei nodi. (FATTO)
+1. Risoluzione ottima del TSP per problemi di piccola dimensione con Gurobi con jupyter notebook. (DA VERIFICARE)
 2. Rifare algoritmo Greedy per trovare soluzione iniziale (vedere slide corso)
-3. Rifare algoritmo SimulatedAnnealing 
+3. Algoritmo SimulatedAnnealing (DA VERIFICARE)
 4. Cooling schedules
 
 ### Cooling schedules
@@ -23,5 +22,5 @@ PROPOSTE INIZIALI:
 	2.  T0: 10*|f0/2| (dove f0 è il valore della soluzione iniziale)
 	3.  TF: 10^-4*|f0|
 	4.  Lk: Lk = L = costante = n (dove n è la dimensione dell'istanza del problema, cioè il numero di nodi del grafo)
-	5.  Quanto decrementare Tk, legge di decremento (successione Tk): Tk+1 = \alpha Tk. Con \aplha < 1. \alpha è elevato (es. 0.99) per Lk basso, mentre \alpha è basso (es. 0.8) per Lk elevato
+	5.  Quanto decrementare Tk, legge di decremento (successione Tk): Tk+1 = \alpha Tk. Con \alpha < 1. \alpha è elevato (es. 0.99) per Lk basso, mentre \alpha è basso (es. 0.8) per Lk elevato
 2, 3, 4 sono proposte iniziali, poi in fase di cooling schedules bisogna provare a migliorarli facendo prove su istanze benchmark.
