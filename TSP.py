@@ -1,5 +1,6 @@
 import math
 import random
+import visualize_tsp
 
 
 class TSP(object):
@@ -93,3 +94,6 @@ class TSP(object):
             self.calcolo_probabilita_accettazione(candidate)
         print("Miglior risultato ottenuto: ", self.best_objective)
         return self.best_objective
+
+    def visualizza_tour(self):
+        visualize_tsp.plotTSP([self.best_objective], self.coordinate)
