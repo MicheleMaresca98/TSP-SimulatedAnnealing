@@ -1,4 +1,4 @@
-from anneal import SimAnneal
+from Esempi.anneal import SimAnneal
 
 
 def read_coords(path):

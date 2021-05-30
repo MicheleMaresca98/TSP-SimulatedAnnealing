@@ -1,6 +1,6 @@
 import math
 import random
-import visualize_tsp
+from Esempi import visualize_tsp
 import matplotlib.pyplot as plt
 
 
