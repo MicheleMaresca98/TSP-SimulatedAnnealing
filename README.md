@@ -11,8 +11,9 @@ http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsplib.html
 ### TODO
 1. Risoluzione ottima del TSP per problemi di piccola dimensione con Gurobi con jupyter notebook. (DA VERIFICARE)
 2. Rifare algoritmo Greedy per trovare soluzione iniziale (vedere slide corso)
-3. Algoritmo SimulatedAnnealing (DA VERIFICARE)
+3. Algoritmo SimulatedAnnealing (FATTO)
 4. Cooling schedules
+5. Creare directory per istanze benchmark
 
 ### Cooling schedules
 PROPOSTE INIZIALI:
