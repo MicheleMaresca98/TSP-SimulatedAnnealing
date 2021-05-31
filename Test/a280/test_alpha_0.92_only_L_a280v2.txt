@@ -1,0 +1,146 @@
+test for a280.txt : 
+1) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 10
+ Esito euristica :3237.8288740438707
+2) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 20
+ Esito euristica :3475.170618900516
+3) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 30
+ Esito euristica :3299.9528173818567
+4) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 40
+ Esito euristica :3188.21101908699
+5) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 50
+ Esito euristica :3243.38553352684
+6) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 60
+ Esito euristica :3160.3921876981285
+7) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 70
+ Esito euristica :3322.6450647959596
+8) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 80
+ Esito euristica :3278.939506536953
+9) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 90
+ Esito euristica :3211.5969046362015
+10) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 100
+ Esito euristica :3538.2639343021947
+11) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 110
+ Esito euristica :3471.0396498725736
+12) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 120
+ Esito euristica :3514.7066976320452
+13) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 130
+ Esito euristica :3281.099600643401
+14) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 140
+ Esito euristica :3207.0989114962613
+15) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 150
+ Esito euristica :3256.5405904973495
+16) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 160
+ Esito euristica :3455.505928908347
+17) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 170
+ Esito euristica :3275.4913990301125
+18) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 180
+ Esito euristica :3296.853838234765
+19) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 190
+ Esito euristica :3288.4765984404785
+20) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 200
+ Esito euristica :3130.9129800692353
+21) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 210
+ Esito euristica :3375.6304864011877
+22) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 220
+ Esito euristica :3281.5437854449087
+23) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 230
+ Esito euristica :3160.500278080935
+24) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 240
+ Esito euristica :3215.29605816751
+25) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 250
+ Esito euristica :3487.4321283517415
+26) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 260
+ Esito euristica :3514.1893614097703
+27) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 270
+ Esito euristica :3201.0846223581507
+28) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :3271.568843990252
+29) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.92
+ iterazioni alla stessa temperatura : 290
+ Esito euristica :3201.5919470160147
