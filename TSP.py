@@ -1,6 +1,8 @@
 import math
 import random
 import visualize_tsp
+from matplotlib import pyplot as plt
+import networkx as nx
 
 
 class TSP(object):
@@ -11,16 +13,15 @@ class TSP(object):
         self.temperatura_iniziale = temperatura_iniziale  # serve il valore della soluzione iniziale
         self.temperatura_finale = temperatura_finale  # serve il valore della soluzione iniziale
         self.T = self.temperatura_iniziale
-        self.alpha = ((0.99 if self.L < 1000 else 0.8) if alpha == -1 else alpha)
+        self.alpha = ((0.99 if self.L < 10000 else 0.8) if alpha == -1 else alpha)
         self.nodi = [i for i in range(self.N)]
-        self.distanze = {(n1, n2): self.calcolo_distanza(n1, n2) for n1 in self.nodi for n2 in self.nodi if n1 != n2}
+        #self.distanze = {(n1, n2): self.calcolo_distanza(n1, n2) for n1 in self.nodi for n2 in self.nodi if n1 != n2}
         self.best_solution = None
         self.best_objective = float("Inf")
         self.current_solution = None
         self.current_objective = float("Inf")
         self.iterazione = 1  # iterazione con valore di temperatura fisso
 
-        # Per ora lascio Greedy trovata
     def calcolo_soluzione_iniziale(self):
         current_node = random.choice(self.nodi)
         solution = [current_node]
@@ -63,7 +64,6 @@ class TSP(object):
             if random.random() < math.exp(-(candidate_objective - self.current_objective) / self.T):
                 self.current_solution, self.current_objective = candidate, candidate_objective
 
-
     def avanza_T(self):
         if self.iterazione == self.L:
             self.iterazione = 1
@@ -83,10 +83,9 @@ class TSP(object):
         else:
             candidate[j:i] = reversed(candidate[j:i])
 
-
     def simulatedannealing(self):
         self.calcolo_soluzione_iniziale()
-        while self.T >= self.temperatura_finale: # si potrebbe
+        while self.T >= self.temperatura_finale:  # si potrebbe
             # aggiungere anche un contatore assoluto di iterazioni
             # per non farne troppe
             candidate = list(self.current_solution)
@@ -96,8 +95,8 @@ class TSP(object):
             self.avanza_T()
         print("Miglior risultato ottenuto: ", self.best_objective)
         print("Tour: ", self.best_solution)
-        print(self.distanze)
         return self.best_objective
 
     def visualizza_tour(self):
-        visualize_tsp.plotTSP([self.best_objective], self.coordinate)
+        tour = list(self.best_solution)
+        visualize_tsp.plotTSP([tour], self.coordinate)

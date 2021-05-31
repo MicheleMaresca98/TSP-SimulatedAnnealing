@@ -3,7 +3,7 @@ from TSP import TSP
 
 def leggi_coordinate(path):
     indice_linea_dimensione = 4
-    indice_inizio_linee_coordinate = 9
+    indice_inizio_linee_coordinate = 7
     coordinate = []
     with open(path, "r") as f:
         linee = f.readlines()
@@ -18,8 +18,8 @@ def leggi_coordinate(path):
 
 
 if __name__ == "__main__":
-    coordinate, dimensione = leggi_coordinate("burma14.txt")
-    b = 3323  # best solution istanza benchmark
+    coordinate, dimensione = leggi_coordinate("rl5934.tsp.txt")
+    b = 554070,556050 #239297 #2579 #3323  # best solution istanza benchmark
     tsp = TSP(coordinate)
     eur = tsp.simulatedannealing()
     gap = (abs(b - eur) / abs(b)) * 100.0
