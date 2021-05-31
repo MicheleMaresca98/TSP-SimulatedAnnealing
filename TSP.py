@@ -4,10 +4,10 @@ import visualize_tsp
 
 
 class TSP(object):
-    def __init__(self, coordinate, temperatura_iniziale=-1, temperatura_finale=-1, alpha=-1):
+    def __init__(self, coordinate, temperatura_iniziale=-1, temperatura_finale=-1, alpha=-1, L=-1):
         self.coordinate = coordinate
         self.N = len(coordinate)
-        self.L = self.N
+        self.L = self.N if L == -1 else L
         self.temperatura_iniziale = temperatura_iniziale  # serve il valore della soluzione iniziale
         self.temperatura_finale = temperatura_finale  # serve il valore della soluzione iniziale
         self.T = self.temperatura_iniziale
