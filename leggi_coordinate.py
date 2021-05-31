@@ -1,8 +1,6 @@
 
+def leggi_coordinate(path,indice_linea_dimensione,indice_inizio_linee_coordinate):
 
-def leggi_coordinate(path):
-    indice_linea_dimensione = 4
-    indice_inizio_linee_coordinate = 7
     coordinate = []
     with open(path, "r") as f:
         linee = f.readlines()
