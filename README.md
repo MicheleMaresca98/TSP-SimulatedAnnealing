@@ -13,7 +13,6 @@ http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsplib.html
 2. Rifare algoritmo Greedy per trovare soluzione iniziale (vedere slide corso)
 3. Algoritmo SimulatedAnnealing (FATTO)
 4. Cooling schedules
-5. Creare directory per istanze benchmark
 
 ### Cooling schedules
 PROPOSTE INIZIALI:

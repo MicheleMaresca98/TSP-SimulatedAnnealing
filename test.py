@@ -5,7 +5,7 @@ from leggi_coordinate import leggi_coordinate
 if __name__ == "__main__":
     indice_linea_dimensione = 4
     indice_inizio_linee_coordinate = 7
-    coordinate, dimensione = leggi_coordinate("a280.txt",indice_linea_dimensione,indice_inizio_linee_coordinate)
+    coordinate, dimensione = leggi_coordinate("IstanzeBenchmark/a280.txt", indice_linea_dimensione, indice_inizio_linee_coordinate)
     b = 554070.556050  # 19947008.20167722 #239297 #2579 #3323  # best solution istanza benchmark
     L = [i*10 for i in range(1,30)]
     t_in = 10000
