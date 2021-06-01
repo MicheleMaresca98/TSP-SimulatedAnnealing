@@ -1,0 +1,51 @@
+test for nearest_neighbour_vm1084_v1.txt : 
+1) temperatura inziale : 10
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :293946.2911018693
+2) temperatura inziale : 100
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :290909.6316885693
+3) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :298865.4034825757
+4) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :300992.94657517713
+5) temperatura inziale : 100000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :297365.97047771135
+6) temperatura inziale : 1000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :304777.0873941739
+7) temperatura inziale : 10000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :303059.87353262043
+8) temperatura inziale : 100000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :298122.9309724869
+9) temperatura inziale : 1000000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :297320.0512209533
+10) temperatura inziale : 10000000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :305995.9602845471

@@ -1,0 +1,51 @@
+test for nearest_neighbour_berlin52v1.txt : 
+1) temperatura inziale : 10
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :7926.483227598424
+2) temperatura inziale : 100
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :7958.232644266575
+3) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :7544.365901904089
+4) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :7544.365901904089
+5) temperatura inziale : 100000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :7986.149368339057
+6) temperatura inziale : 1000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :7961.209025907467
+7) temperatura inziale : 10000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :7756.553317968861
+8) temperatura inziale : 100000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :7833.852993234588
+9) temperatura inziale : 1000000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :7544.365901904089
+10) temperatura inziale : 10000000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 280
+ Esito euristica :7758.021753765992
