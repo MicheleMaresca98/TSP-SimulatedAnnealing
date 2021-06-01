@@ -11,8 +11,8 @@ if __name__ == "__main__":
     t_in = 10000
     t_fin = 1
     alpha = 0.92
-    with open("Test/a280/test_alpha_0.92_only_L_a280v1.txt", 'w') as f:
-        f.write('test for a280.txt : \n')
+    with open("Test/nearest_neighbour_a280/test_alpha_0.92_only_L_a280v1.txt", 'w') as f:
+        f.write('test for nearest_neighbour_a280.txt : \n')
         for i in range(0,29):
             tsp = TSP(coordinate,t_in,t_fin,alpha,L[i])
             eur = tsp.simulatedannealing()
@@ -32,8 +32,8 @@ if __name__ == "__main__":
     t_in = 10000
     t_fin = 1
     alpha = 0.92
-    with open("Test/a280/test_alpha_0.92_only_L_a280v2.txt", 'w') as f:
-        f.write('test for a280.txt : \n')
+    with open("Test/nearest_neighbour_a280/test_alpha_0.92_only_L_a280v2.txt", 'w') as f:
+        f.write('test for nearest_neighbour_a280.txt : \n')
         for i in range(0, 29):
             tsp = TSP(coordinate, t_in, t_fin, alpha, L[i])
             eur = tsp.simulatedannealing()
