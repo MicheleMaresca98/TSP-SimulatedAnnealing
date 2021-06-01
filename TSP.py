@@ -85,7 +85,7 @@ class TSP(object):
         self.best_solution = solution
         self.current_objective = current_obj
         self.current_solution = solution
-
+        print("Obj sol iniziale : ",self.best_objective)
         if self.temperatura_iniziale == -1:
             self.temperatura_iniziale = 10 * abs(self.best_objective / 2.0)
             self.T = self.temperatura_iniziale
@@ -132,7 +132,7 @@ class TSP(object):
             candidate[j:i] = reversed(candidate[j:i])
 
     def simulatedannealing(self):
-        # self.calcolo_soluzione_iniziale()
+        self.calcolo_soluzione_iniziale()
         self.Greedy_TSP()
         while self.T >= self.temperatura_finale:  # si potrebbe
             # aggiungere anche un contatore assoluto di iterazioni
