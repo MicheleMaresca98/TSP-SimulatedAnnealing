@@ -13,12 +13,62 @@ class TSP(object):
         self.T = self.temperatura_iniziale
         self.alpha = ((0.99 if self.L < 10000 else 0.8) if alpha == -1 else alpha)
         self.nodi = [i for i in range(self.N)]
-        # self.distanze = {(n1, n2): self.calcolo_distanza(n1, n2) for n1 in self.nodi for n2 in self.nodi if n1 != n2}
+        self.distanze = {(n1, n2): self.calcolo_distanza(n1, n2) for n1 in self.nodi for n2 in self.nodi if n1 != n2}
         self.best_solution = None
         self.best_objective = float("Inf")
         self.current_solution = None
         self.current_objective = float("Inf")
         self.iterazione = 1  # iterazione con valore di temperatura fisso
+
+    def convert_archi_tour(self, lista_archi_inseriti):
+        initial_solution = [lista_archi_inseriti[0][0], lista_archi_inseriti[0][1]]
+        k = 1
+        i = 0
+        while k < (len(self.coordinate) - 1):
+            nodo_curr = initial_solution[k]
+            i += 1
+            if nodo_curr == lista_archi_inseriti[i % len(lista_archi_inseriti)][0]:
+                initial_solution.append(lista_archi_inseriti[i % len(lista_archi_inseriti)][1])
+                lista_archi_inseriti.remove(lista_archi_inseriti[i % len(lista_archi_inseriti)])
+                k += 1
+            elif nodo_curr == lista_archi_inseriti[i % len(lista_archi_inseriti)][1]:
+                initial_solution.append(lista_archi_inseriti[i % len(lista_archi_inseriti)][0])
+                lista_archi_inseriti.remove(lista_archi_inseriti[i % len(lista_archi_inseriti)])
+                k += 1
+        return initial_solution
+
+    def Greedy_TSP(self):
+        contatore = [0 for i in range(len(self.coordinate))]
+        i = 0
+        lista_archi_inseriti = []
+        unvisited = self.distanze
+        while i < (len(self.coordinate) - 1):
+            minimo = min(unvisited, key=lambda k: unvisited[k])
+            if i == 0:
+                contatore[minimo[0]] = 1
+            if contatore[minimo[0]] < 2 and contatore[minimo[1]] < 2:
+                contatore[minimo[0]] += 1
+                contatore[minimo[1]] += 1
+                unvisited.pop(minimo)
+                unvisited.pop((minimo[1], minimo[0]))
+                lista_archi_inseriti.append(minimo)
+            else:
+                unvisited.pop((minimo[1], minimo[0]))
+                unvisited.pop(minimo)
+                i -= 1
+            i += 1
+        initial_solution = self.convert_archi_tour(lista_archi_inseriti)
+        current_obj = self.funzione_obiettivo(initial_solution)
+        self.best_objective = current_obj
+        self.best_solution = initial_solution
+        self.current_objective = current_obj
+        self.current_solution = initial_solution
+
+        if self.temperatura_iniziale == -1:
+            self.temperatura_iniziale = 10 * abs(self.best_objective / 2.0)
+            self.T = self.temperatura_iniziale
+        if self.temperatura_finale == -1:
+            self.temperatura_finale = 10 ** (-4) * abs(self.best_objective)
 
     def calcolo_soluzione_iniziale(self):
         current_node = random.choice(self.nodi)
@@ -82,7 +132,8 @@ class TSP(object):
             candidate[j:i] = reversed(candidate[j:i])
 
     def simulatedannealing(self):
-        self.calcolo_soluzione_iniziale()
+        # self.calcolo_soluzione_iniziale()
+        self.Greedy_TSP()
         while self.T >= self.temperatura_finale:  # si potrebbe
             # aggiungere anche un contatore assoluto di iterazioni
             # per non farne troppe
