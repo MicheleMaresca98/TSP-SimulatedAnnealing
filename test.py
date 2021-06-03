@@ -1,13 +1,21 @@
 from TSP import TSP
 from leggi_coordinate import leggi_coordinate
-
+import visualize_tsp
 
 if __name__ == "__main__":
     indice_linea_dimensione = 4
-    indice_inizio_linee_coordinate = 7
-    coordinate, dimensione = leggi_coordinate("IstanzeBenchmark/a280.txt", indice_linea_dimensione, indice_inizio_linee_coordinate)
+    indice_inizio_linee_coordinate = 9
+    coordinate, dimensione = leggi_coordinate("IstanzeBenchmark/burma14.txt", indice_linea_dimensione, indice_inizio_linee_coordinate)
 #    coordinate_usa, dimensione_usa = leggi_coordinate("IstanzeBenchmark/usa13509.tsp.txt", 7,10)
 #    b = 554070.556050  # 19947008.20167722 #239297 #2579 #3323  # best solution istanza benchmark
+    tour = list([0, 9, 8, 10, 7, 12, 6, 11, 5, 4, 3, 2, 13, 1])
+    visualize_tsp.plotTSP([tour], coordinate)
+
+
+'''''''''''''''''''''''''''''
+    indice_linea_dimensione = 4
+    indice_inizio_linee_coordinate = 7
+    coordinate, dimensione = leggi_coordinate("IstanzeBenchmark/burma14.txt", indice_linea_dimensione, indice_inizio_linee_coordinate)
     L = 160
     t_in = 1000
     t_fin = 1
@@ -32,10 +40,6 @@ if __name__ == "__main__":
             f.write(str(eur))
             f.write('\n')
             print(i, "\n")
-
-
-'''''''''''''''''''''''''''''
-
     with open("Test/nearest_neighbour_burma/test_ordini_di_grandezza_burma14_v3.txt", 'w') as f:
         f.write('test for nearest_neighbour_burma14_v3.txt : \n')
         print("terzo: \n")

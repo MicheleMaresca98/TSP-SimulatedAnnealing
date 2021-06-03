@@ -93,7 +93,7 @@ class TSP(object):
             self.calcolo_probabilita_accettazione(candidate)
             self.avanza_T()
         print("Miglior risultato ottenuto: ", self.best_objective)
-#        print("Tour: ", self.best_solution)
+        print("Tour: ", self.best_solution)
         return self.best_objective
 
     def visualizza_tour(self):
