@@ -13,7 +13,7 @@ class TSP(object):
         self.T = self.temperatura_iniziale
         self.alpha = ((0.99 if self.L < 10000 else 0.8) if alpha == -1 else alpha)
         self.nodi = [i for i in range(self.N)]
-        self.distanze = {(n1, n2): self.calcolo_distanza(n1, n2) for n1 in self.nodi for n2 in self.nodi if n1 != n2}
+#        self.distanze = {(n1, n2): self.calcolo_distanza(n1, n2) for n1 in self.nodi for n2 in self.nodi if n1 != n2}
         self.best_solution = None
         self.best_objective = float("Inf")
         self.current_solution = None
@@ -92,8 +92,8 @@ class TSP(object):
             self.mossa2_opt(candidate)
             self.calcolo_probabilita_accettazione(candidate)
             self.avanza_T()
-#       print("Miglior risultato ottenuto: ", self.best_objective)
-#       print("Tour: ", self.best_solution)
+        print("Miglior risultato ottenuto: ", self.best_objective)
+#        print("Tour: ", self.best_solution)
         return self.best_objective
 
     def visualizza_tour(self):

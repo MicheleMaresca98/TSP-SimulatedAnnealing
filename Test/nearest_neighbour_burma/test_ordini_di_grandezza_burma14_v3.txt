@@ -1,0 +1,46 @@
+test for nearest_neighbour_burma14_v3.txt : 
+1) temperatura inziale : 10
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 60
+ Esito euristica :32.604466724081405
+2) temperatura inziale : 100
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 60
+ Esito euristica :31.864380588729958
+3) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 60
+ Esito euristica :31.59438262543207
+4) temperatura inziale : 10000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 60
+ Esito euristica :31.370671712933078
+5) temperatura inziale : 100000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 60
+ Esito euristica :32.489038365125886
+6) temperatura inziale : 1000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 60
+ Esito euristica :31.802031418170344
+7) temperatura inziale : 10000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 60
+ Esito euristica :32.37128027833796
+8) temperatura inziale : 100000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 60
+ Esito euristica :32.060129075400816
+9) temperatura inziale : 1000000000
+ temperatura finale : 1
+ alpha :0.99
+ iterazioni alla stessa temperatura : 60
+ Esito euristica :32.81277804469343

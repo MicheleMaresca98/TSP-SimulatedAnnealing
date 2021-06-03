@@ -46,6 +46,7 @@ if __name__ == "__main__":
     sheet['C7'] = 19947008
     sheet['C8'] = (obj_finale_usa-19947008)/19947008
     print('fine')
+    nuovo_file.save('Test/Test_grandi_dimesioni/test_grandi_dimensioni_paametri_ottimali.xlsx')
 
 '''''''''''
     indice_linea_dimensione = 4
@@ -141,7 +142,5 @@ if __name__ == "__main__":
     sheet['C6'] = obj_iniziale
     sheet['C7'] = obj_finale
     print('vm1084')
-
-    nuovo_file.save('Test/Random_VS_Gready_standard_parameter/Random_vs_Gready.xlsx')
 
 '''''
