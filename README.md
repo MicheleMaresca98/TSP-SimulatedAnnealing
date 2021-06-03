@@ -21,4 +21,4 @@ PROPOSTE INIZIALI:
 	4.  Lk: Lk = L = costante = n (dove n è la dimensione dell'istanza del problema, cioè il numero di nodi del grafo)
 	5.  Quanto decrementare Tk, legge di decremento (successione Tk): Tk+1 = \alpha Tk. Con \alpha < 1. \alpha è elevato (es. 0.99) per Lk basso, mentre \alpha è basso (es. 0.8) per Lk elevato
 2, 3, 4 sono proposte iniziali, poi in fase di cooling schedules bisogna provare a migliorarli facendo prove su istanze benchmark.
-![TSP](https://user-images.githubusercontent.com/58850779/120634123-2e2a4900-c46b-11eb-8d82-a6389f0eef19.png)
+![TSP_Berlin](https://user-images.githubusercontent.com/58850779/120661639-bff47f00-c488-11eb-9e3e-13b046a16a4e.png)
