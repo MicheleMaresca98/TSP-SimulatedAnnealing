@@ -1,0 +1,51 @@
+test for nearest_neighbour_a280.txt : 
+1) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.95
+ iterazioni alla stessa temperatura : 160
+ Esito euristica :3332.9663572618574
+2) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.95
+ iterazioni alla stessa temperatura : 160
+ Esito euristica :3171.56475865835
+3) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.95
+ iterazioni alla stessa temperatura : 160
+ Esito euristica :3322.6450647959596
+4) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.95
+ iterazioni alla stessa temperatura : 160
+ Esito euristica :3467.935910629964
+5) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.95
+ iterazioni alla stessa temperatura : 160
+ Esito euristica :3282.0446035086325
+6) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.95
+ iterazioni alla stessa temperatura : 160
+ Esito euristica :3417.4756412042807
+7) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.95
+ iterazioni alla stessa temperatura : 160
+ Esito euristica :3507.7843342323426
+8) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.95
+ iterazioni alla stessa temperatura : 160
+ Esito euristica :3198.1901451494864
+9) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.95
+ iterazioni alla stessa temperatura : 160
+ Esito euristica :3239.9722239674434
+10) temperatura inziale : 1000
+ temperatura finale : 1
+ alpha :0.95
+ iterazioni alla stessa temperatura : 160
+ Esito euristica :3209.5284338382594
