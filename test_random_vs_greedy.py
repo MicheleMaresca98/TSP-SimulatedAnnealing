@@ -12,7 +12,7 @@ if __name__ == "__main__":
     indice_inizio_linee_coordinate = 7
     coordinate_a280, dimensione_a280 = leggi_coordinate("IstanzeBenchmark/a280.txt", indice_linea_dimensione, indice_inizio_linee_coordinate)
     coordinate_vm1084, dimensione_vm1084 = leggi_coordinate("IstanzeBenchmark/vm1084.tsp.txt", indice_linea_dimensione, indice_inizio_linee_coordinate)
-    sheet = nuovo_file.create_sheet('remake_a280_vm1084_random')
+    sheet = nuovo_file.create_sheet('remake_a280_vm1084_random2')
     tsp_random_a280 = TSP_RANDOM(coordinate_a280)
     tsp_random_vm1084 = TSP_RANDOM(coordinate_vm1084)
     obj_finale_a280,obj_iniziale_a280 = tsp_random_a280.simulatedannealing()
@@ -44,8 +44,10 @@ if __name__ == "__main__":
     sheet['C7'] = obj_finale_vm1084
     sheet['C8'] = 239297
     sheet['C9'] = (obj_finale_vm1084-239297)/239297
+    print('Obj_finale_a280', obj_finale_a280)
+    print('Obj_finale_vm1084', obj_finale_vm1084)
     print('fine')
-    nuovo_file.save('Test/Test_remake_a280_vm1084_random/remake_a280_vm1084_random.xlsx')
+    nuovo_file.save('Test/Test_remake_a280_vm1084_random/remake_a280_vm1084_random2.xlsx')
 
 '''''''''''
 
