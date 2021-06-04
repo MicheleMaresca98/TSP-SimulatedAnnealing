@@ -8,9 +8,6 @@ approccio esatto.
 ### Link per istanze benchmark
 http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsplib.html
 
-### TODO
-1. Cooling schedules
-
 ### Cooling schedules
 PROPOSTE INIZIALI:
 

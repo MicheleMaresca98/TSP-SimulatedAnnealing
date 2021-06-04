@@ -8,12 +8,11 @@ class TSP(object):
         self.coordinate = coordinate
         self.N = len(coordinate)
         self.L = self.N if L == -1 else L
-        self.temperatura_iniziale = temperatura_iniziale  # serve il valore della soluzione iniziale
-        self.temperatura_finale = temperatura_finale  # serve il valore della soluzione iniziale
+        self.temperatura_iniziale = temperatura_iniziale
+        self.temperatura_finale = temperatura_finale
         self.T = self.temperatura_iniziale
-        self.alpha = ((0.99 if self.L < 10000 else 0.8) if alpha == -1 else alpha)
+        self.alpha = ((0.99 if self.L < 1000 else 0.8) if alpha == -1 else alpha)
         self.nodi = [i for i in range(self.N)]
-#        self.distanze = {(n1, n2): self.calcolo_distanza(n1, n2) for n1 in self.nodi for n2 in self.nodi if n1 != n2}
         self.best_solution = None
         self.best_objective = float("Inf")
         self.current_solution = None
