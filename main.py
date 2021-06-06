@@ -13,4 +13,4 @@ if __name__ == "__main__":
     eur = tsp.simulatedannealing()
     gap = (abs(float(b) - float(eur)) / abs(float(b))) * 100.0
     print("gap : ", gap)
-    # tsp.visualizza_tour()
+    tsp.visualizza_tour()
