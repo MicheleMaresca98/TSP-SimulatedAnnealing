@@ -76,9 +76,9 @@ class TSP(object):
         free_nodes.remove(candidate[i + 1] if i < (self.N - 1) else candidate[0])
         j = random.choice(free_nodes)
         if i < j:
-            candidate[i:j] = reversed(candidate[i:j])
+            candidate[i:j+1] = reversed(candidate[i:j+1])
         else:
-            candidate[j:i] = reversed(candidate[j:i])
+            candidate[j:i+1] = reversed(candidate[j:i+1])
 
     def simulatedannealing(self):
         self.calcolo_soluzione_iniziale()
