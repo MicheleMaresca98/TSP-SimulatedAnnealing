@@ -82,7 +82,6 @@ class TSP(object):
 
     def simulatedannealing(self):
         self.calcolo_soluzione_iniziale()
-        #self.Greedy_TSP()
         while self.T >= self.temperatura_finale:  # si potrebbe
             # aggiungere anche un contatore assoluto di iterazioni
             # per non farne troppe
